@@ -1,0 +1,4 @@
+Executar 10x
+rodar 10x
+media: request, atendidos, erros
+criar numero de clusters exatos e necessarios para nao dar tanto erro
