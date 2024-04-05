@@ -6,6 +6,7 @@ import {
   Param,
   Post,
   Put,
+  Scope,
 } from '@nestjs/common';
 import { ApiTags } from '@nestjs/swagger';
 import { Customer } from './customer.schema';
@@ -14,7 +15,7 @@ import { CustomerUpdateDto } from './dto/customer.update.dto';
 import { CustomersService } from './customer.service';
 
 @ApiTags('Customers')
-@Controller('customers')
+@Controller({ path: 'customers', scope: Scope.DEFAULT })
 export class CustomersController {
   constructor(private readonly customersService: CustomersService) {}
 

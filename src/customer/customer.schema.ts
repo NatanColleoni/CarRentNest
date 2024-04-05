@@ -5,7 +5,7 @@ export type CustomerDocument = HydratedDocument<Customer>;
 
 @Schema({ timestamps: true })
 export class Customer {
-  @Prop()
+  @Prop({ index: true })
   name: string;
 
   @Prop()

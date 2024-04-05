@@ -7,7 +7,11 @@ import { CarModule } from './car/car.module';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb://localhost:27017/car-rent'),
+    MongooseModule.forRoot(process.env.DATABASE_URL, {
+      minPoolSize: 0,
+      maxPoolSize: 20,
+      serverSelectionTimeoutMS: 5000,
+    }),
     CustomerModule,
     CarCategoryModule,
     CarModule,

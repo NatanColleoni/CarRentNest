@@ -1,4 +1,5 @@
-Executar 10x
-rodar 10x
-media: request, atendidos, erros
+- media:
+    - request: 63.700 
+    - atendidos: 55.500 - 87.19%
+    - erros: 3.000 - 4.707%
 criar numero de clusters exatos e necessarios para nao dar tanto erro

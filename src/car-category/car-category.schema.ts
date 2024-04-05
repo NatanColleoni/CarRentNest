@@ -5,7 +5,7 @@ export type CarCategoryDocument = HydratedDocument<CarCategory>;
 
 @Schema({ timestamps: true })
 export class CarCategory {
-  @Prop()
+  @Prop({ index: true })
   name: string;
 
   @Prop()

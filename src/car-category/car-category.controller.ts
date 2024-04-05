@@ -6,6 +6,7 @@ import {
   Param,
   Post,
   Put,
+  Scope,
 } from '@nestjs/common';
 import { ApiTags } from '@nestjs/swagger';
 import { CarCategoriesService } from './car-category.service';
@@ -14,7 +15,7 @@ import { CarCategoryUpdateDto } from './dtos/car-category.update.dto';
 import { CarCategoryCreateDto } from './dtos/car-category.create.dto';
 
 @ApiTags('Car Categories')
-@Controller('car-category')
+@Controller({ path: 'car-category', scope: Scope.DEFAULT })
 export class CarCategoriesController {
   constructor(private readonly carCategoriesService: CarCategoriesService) {}
 
