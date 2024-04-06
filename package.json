@@ -19,7 +19,7 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "test:stress": "npx autocannon -c 500 -d 20 -w 10 -W [ -c 1 -d 3 ] --renderStatusCodes --latency --debug http://localhost:3000/cars"
+    "test:stress": "autocannon -c 700 -d 30 -w 10 -W [ -c 1 -d 3 ] --renderStatusCodes --latency --debug http://localhost:3000/cars"
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",
